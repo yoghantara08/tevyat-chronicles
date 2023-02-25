@@ -19,6 +19,7 @@ module.exports = {
       },
       backgroundColor: {
         layout: "#20244290",
+        mobileNav: "#202442",
         active: "#4266D095",
       },
     },
