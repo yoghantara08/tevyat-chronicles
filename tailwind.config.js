@@ -12,10 +12,14 @@ module.exports = {
         robotoMono: ["Roboto Mono", "monospace"],
       },
       textColor: {
-        white: "#e6e6e6",
-        layout: "#202442",
+        white: "#EFF0F3",
+        layout: "#20244290",
         active: "#4266D0",
         secondary: "#A7A9BE",
+      },
+      backgroundColor: {
+        layout: "#20244290",
+        active: "#4266D095",
       },
     },
   },
