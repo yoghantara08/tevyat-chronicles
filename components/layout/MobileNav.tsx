@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import { Box } from "@mui/material";
 import { motion, AnimatePresence } from "framer-motion";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
@@ -37,9 +36,9 @@ const MobileNav = () => {
 
   return (
     <nav className="lg:hidden flex justify-between px-5 py-4 bg-layout">
-      <Box className="font-bold font-robotoMono">
+      <div className="font-bold font-robotoMono">
         <h1 className="text-xl">Teyvat Chronicles</h1>
-      </Box>
+      </div>
 
       <div
         className="cursor-pointer relative z-20"
