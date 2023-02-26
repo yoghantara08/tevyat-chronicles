@@ -4,12 +4,14 @@ import NavIcon from "./NavIcon";
 const NavLink: React.FC<{
   pathname: string;
   nav: { link: string; title: string };
-}> = ({ pathname, nav }) => {
+  onClick?: () => void;
+}> = ({ pathname, nav, onClick }) => {
   return (
     <li
       className={`${
         pathname === nav.link ? "bg-active" : ""
       } py-2 px-4 mb-3 rounded`}
+      onClick={onClick}
     >
       <Link
         href={nav.link}
