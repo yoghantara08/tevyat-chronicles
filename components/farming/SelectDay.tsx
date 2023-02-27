@@ -15,7 +15,7 @@ const SelectDay: React.FC<Props> = ({ selected, setSelected }) => {
           <span className="capitalize">{selected}</span>
           <AiFillCaretDown />
         </Listbox.Button>
-        <Listbox.Options className="absolute w-full bg-mobileNav py-2 rounded mt-1 space-y-2">
+        <Listbox.Options className="absolute w-full bg-mobileNav border border-gray-500 py-2 rounded mt-1 space-y-2">
           {selectDay.map((day) => (
             <Listbox.Option
               key={day.id}
