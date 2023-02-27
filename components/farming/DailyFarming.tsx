@@ -36,7 +36,7 @@ const DailyFarming = ({ talentBooks, weaponAscension }: Props) => {
         </h3>
         <SelectDay selected={selectedDay} setSelected={setSelected} />
       </div>
-      <section className="w-full rounded-t overflow-hidden divide-y divide-gray-700 bg-layout">
+      <section className="w-full rounded-t overflow-hidden divide-y divide-gray-700 bg-mobileNav">
         {filteredTalentBooks.map((talentBook) => (
           <TalentBooks key={talentBook.id} talentBook={talentBook} />
         ))}

@@ -19,9 +19,11 @@ const WeaponAscension: React.FC<{
 
       <div className="font-semibold mt-2">
         <h4 className="align-baseline capitalize">
-          <span className="text-gray-100 font-bold">{ascension.id} </span>
+          <span className="text-gray-100 font-bold">
+            {ascension.id.replaceAll("-", " ")}{" "}
+          </span>
           <span className="text-gray-300">
-            ({ascension.source.replace("-", " ")})
+            ({ascension.source.replaceAll("-", " ")})
           </span>
         </h4>
         <div className="pb-2 pt-4 flex gap-6 flex-wrap w-full">
