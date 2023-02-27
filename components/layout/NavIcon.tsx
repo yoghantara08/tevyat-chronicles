@@ -7,7 +7,7 @@ const NavIcon: React.FC<{ icon: string }> = ({ icon }) => {
     case "Home":
       selectedIcon = (
         <Image
-          src="/images/home.png"
+          src="/logo/home.png"
           alt="home"
           width={28}
           height={28}
@@ -18,7 +18,7 @@ const NavIcon: React.FC<{ icon: string }> = ({ icon }) => {
     case "Characters":
       selectedIcon = (
         <Image
-          src="/images/characters.png"
+          src="/logo/characters.png"
           alt="characters"
           width={30}
           height={30}
@@ -27,13 +27,13 @@ const NavIcon: React.FC<{ icon: string }> = ({ icon }) => {
       break;
     case "Weapons":
       selectedIcon = (
-        <Image src="/images/weapons.png" alt="weapons" width={32} height={32} />
+        <Image src="/logo/weapons.png" alt="weapons" width={32} height={32} />
       );
       break;
     case "Artifacts":
       selectedIcon = (
         <Image
-          src="/images/artifacts.png"
+          src="/logo/artifacts.png"
           alt="artifacts"
           width={32}
           height={32}
@@ -43,7 +43,7 @@ const NavIcon: React.FC<{ icon: string }> = ({ icon }) => {
     case "Materials":
       selectedIcon = (
         <Image
-          src="/images/materials.png"
+          src="/logo/materials.png"
           alt="materials"
           width={32}
           height={32}
@@ -53,7 +53,7 @@ const NavIcon: React.FC<{ icon: string }> = ({ icon }) => {
     case "Consumables":
       selectedIcon = (
         <Image
-          src="/images/consumables.png"
+          src="/logo/consumables.png"
           alt="consumables"
           width={32}
           height={32}
@@ -63,7 +63,7 @@ const NavIcon: React.FC<{ icon: string }> = ({ icon }) => {
     case "Elements":
       selectedIcon = (
         <Image
-          src="/images/elements.png"
+          src="/logo/elements.png"
           alt="elements"
           width={32}
           height={32}
@@ -74,7 +74,7 @@ const NavIcon: React.FC<{ icon: string }> = ({ icon }) => {
     case "Enemies":
       selectedIcon = (
         <Image
-          src="/images/enemies.png"
+          src="/logo/enemies.png"
           alt="enemies"
           width={28}
           height={28}
