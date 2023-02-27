@@ -1,9 +1,9 @@
+import { GetStaticProps, InferGetStaticPropsType } from "next";
+import { getAllTalentBook, getAllWeaponAscension } from "@/lib/materials-api";
 import Welcome from "@/components/card/Welcome";
 import ResetTime from "@/components/countdown/ResetTime";
 import DailyFarming from "@/components/farming/DailyFarming";
 import YoutubeVideos from "@/components/youtube/YoutubeVideos";
-import { getAllTalentBook, getAllWeaponAscension } from "@/lib/materials-api";
-import { GetStaticProps, InferGetStaticPropsType } from "next";
 
 export const getStaticProps: GetStaticProps = async () => {
   const talentBooks = await getAllTalentBook();
