@@ -22,6 +22,8 @@ export interface IWeaponAscension {
 export interface ICharacters {
   id: string;
   name: string;
+  rarity: number;
+  vision: string;
 }
 
 export interface ICharacter {
@@ -31,7 +33,7 @@ export interface ICharacter {
   weapon: string;
   nation: string;
   affiliation: string;
-  rarity: string;
+  rarity: number;
   constellation: string;
   birthday: string;
   description: string;

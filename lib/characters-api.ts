@@ -10,7 +10,12 @@ export const getAllCharacters = async () => {
   await Promise.all(
     data.map(async (item: string) => {
       const character = await getCharacter(item);
-      characters.push({ id: item, name: character.name });
+      characters.push({
+        id: item,
+        name: character.name,
+        rarity: character.rarity,
+        vision: character.vision,
+      });
     })
   );
 

@@ -16,11 +16,15 @@ module.exports = {
         layout: "#20244290",
         active: "#4266D0",
         secondary: "#A7A9BE",
+        legendary: "#926d44",
+        rare: "#7b5c90",
       },
       backgroundColor: {
-        layout: "#20244290",
+        layout: "#202442ce",
         mobileNav: "#202442",
         active: "#4266D095",
+        legendary: "#926d44",
+        rare: "#7b5c90",
       },
       screens: {
         xs: "400px",
