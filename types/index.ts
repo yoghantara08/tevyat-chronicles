@@ -38,27 +38,11 @@ export interface ICharacter {
   birthday: string;
   description: string;
 
-  skillTalents: {
-    name: string;
-    unlock: string;
-    description: string;
-    upgrades: { name: string; value: string }[];
-    type: string;
-  }[];
+  skillTalents: ISkillTalents[];
 
-  passiveTalents: {
-    name: string;
-    unlock: string;
-    description: string;
-    level?: number;
-  }[];
+  passiveTalents: IPassiveTalents[];
 
-  constellations: {
-    name: string;
-    unlock: string;
-    description: string;
-    level: number;
-  }[];
+  constellations: IConstellations[];
 
   vision_key: string;
   weapon_type: string;
@@ -70,4 +54,26 @@ export interface ICharacter {
     price: number;
     image: string;
   }[];
+}
+
+export interface ISkillTalents {
+  name: string;
+  unlock: string;
+  description: string;
+  upgrades: { name: string; value: string }[];
+  type: string;
+}
+
+export interface IPassiveTalents {
+  name: string;
+  unlock: string;
+  description: string;
+  level?: number;
+}
+
+export interface IConstellations {
+  name: string;
+  unlock: string;
+  description: string;
+  level: number;
 }
