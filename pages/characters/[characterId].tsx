@@ -1,6 +1,6 @@
 import CharacterPreview from "@/components/characters/CharacterPreview";
 import CharacterProfile from "@/components/characters/CharacterProfile";
-import SubHeader from "@/components/ui/SubHeader";
+import SkillTalents from "@/components/characters/SkillTalents";
 import { getAllCharacters, getCharacter } from "@/lib/characters-api";
 import { ICharacter } from "@/types";
 import { GetStaticPaths, GetStaticProps } from "next";
@@ -41,7 +41,7 @@ interface Props {
 
 // COMPONENT
 const CharacterPage: React.FC<Props> = ({ character }) => {
-  let characterId;
+  let characterId: any;
   const { query } = useRouter();
 
   if (query.characterId) {
@@ -49,17 +49,20 @@ const CharacterPage: React.FC<Props> = ({ character }) => {
   }
 
   return (
-    <section>
-      <div className="grid xl:grid-cols-3 gap-5">
-        <CharacterPreview
-          id={characterId}
-          name={character.name}
-          rarity={character.rarity}
-          vision={character.vision}
-        />
-        <CharacterProfile character={character} />
-      </div>
-    </section>
+    <>
+      <section>
+        <div className="grid xl:grid-cols-3 gap-5">
+          <CharacterPreview
+            id={characterId}
+            name={character.name}
+            rarity={character.rarity}
+            vision={character.vision}
+          />
+          <CharacterProfile character={character} />
+        </div>
+      </section>
+      <SkillTalents character={character} characterId={characterId} />
+    </>
   );
 };
 

@@ -29,3 +29,25 @@ export const getDay = (): string => {
 
   return day;
 };
+
+export const getBirthday = (birthday: string) => {
+  const d = new Date(birthday);
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  let month = months[d.getMonth()];
+  let date = d.getDate();
+
+  return `${date} ${month}`;
+};
