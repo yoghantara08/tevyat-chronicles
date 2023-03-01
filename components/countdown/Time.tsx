@@ -8,7 +8,7 @@ interface Props {
 
 const Time: React.FC<Props> = ({ region, days, hours, minutes, seconds }) => {
   return (
-    <p className="font-medium">
+    <p className="font-medium text-secondary">
       <span className="font-robotoMono">[{region}] </span>
       {days && days > 0 ? <span>{days}d </span> : ""}
       <span>{hours}h </span>

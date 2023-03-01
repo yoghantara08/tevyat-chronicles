@@ -50,7 +50,7 @@ const CharacterPage: React.FC<Props> = ({ character }) => {
 
   return (
     <section>
-      <div className="grid lg:grid-cols-3 gap-5">
+      <div className="grid xl:grid-cols-3 gap-5">
         <CharacterPreview
           id={characterId}
           name={character.name}

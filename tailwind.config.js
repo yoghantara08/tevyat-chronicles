@@ -15,9 +15,10 @@ module.exports = {
         white: "#EFF0F3",
         layout: "#20244290",
         active: "#4266D0",
-        secondary: "#A7A9BE",
+        secondary: "#d3d4dd",
         legendary: "#926d44",
         rare: "#7b5c90",
+        logo: "#A7A9BE",
       },
       backgroundColor: {
         layout: "#202442ce",
