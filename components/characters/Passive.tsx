@@ -17,10 +17,10 @@ const Passive: React.FC<Props> = ({ talent, id, index }) => {
           width={64}
           height={64}
         />
-        <p className="font-semibold text-xl">{talent.name}</p>
-      </div>
-      <div>
-        <p className="text-secondary">{talent.description}</p>
+        <div>
+          <p className="font-semibold text-xl">{talent.name}</p>
+          <p className="text-secondary">{talent.description}</p>
+        </div>
       </div>
     </div>
   );

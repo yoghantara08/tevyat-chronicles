@@ -1,5 +1,6 @@
 import CharacterPreview from "@/components/characters/CharacterPreview";
 import CharacterProfile from "@/components/characters/CharacterProfile";
+import Constellations from "@/components/characters/Constellations";
 import PassiveTalents from "@/components/characters/PassiveTalents";
 import SkillTalents from "@/components/characters/SkillTalents";
 import { getAllCharacters, getCharacter } from "@/lib/characters-api";
@@ -64,6 +65,7 @@ const CharacterPage: React.FC<Props> = ({ character }) => {
       </section>
       <SkillTalents character={character} characterId={characterId} />
       <PassiveTalents character={character} characterId={characterId} />
+      <Constellations character={character} characterId={characterId} />
     </>
   );
 };
