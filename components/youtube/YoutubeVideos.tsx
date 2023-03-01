@@ -1,12 +1,11 @@
 import { GENSHIN_VIDEOS } from "@/content";
 import React from "react";
+import SubHeader from "../ui/SubHeader";
 
 const YoutubeVideos = () => {
   return (
     <div className="bg-layout py-5 px-6 rounded space-y-3 h-fit">
-      <h3 className="font-bold text-xl text-gray-100 uppercase">
-        Latest Genshin Impact Videos
-      </h3>
+      <SubHeader>Latest Genshin Impact Videos</SubHeader>
 
       {GENSHIN_VIDEOS.map((video) => (
         <iframe

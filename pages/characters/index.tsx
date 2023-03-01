@@ -1,4 +1,5 @@
 import CharacterCard from "@/components/characters/CharacterCard";
+import MainHeader from "@/components/ui/MainHeader";
 import { getAllCharacters } from "@/lib/characters-api";
 import { ICharacters } from "@/types";
 import { GetStaticProps } from "next";
@@ -18,7 +19,7 @@ interface Props {
 const CharactersPage: React.FC<Props> = ({ characters }) => {
   return (
     <section className="rounded py-5">
-      <h2 className="font-bold text-4xl drop-shadow mb-2">Characters</h2>
+      <MainHeader>Characters</MainHeader>
       <div></div>
       <div className="grid sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-3">
         {characters.map((character) => (

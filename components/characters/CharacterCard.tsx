@@ -30,11 +30,11 @@ const CharacterCard: React.FC<Props> = ({ character }) => {
             ))}
           </div>
           <Image
-            src={`/elements/${character.vision}.png`}
+            src={`/elements/${character.vision.toLowerCase()}.png`}
             alt={character.id}
             width={36}
             height={36}
-          ></Image>
+          />
         </div>
 
         <div className=" flex justify-center py-3">
@@ -43,7 +43,7 @@ const CharacterCard: React.FC<Props> = ({ character }) => {
             alt={character.id}
             width={106}
             height={106}
-          ></Image>
+          />
         </div>
       </div>
     </Link>

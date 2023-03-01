@@ -1,6 +1,6 @@
 import { GetStaticProps, InferGetStaticPropsType } from "next";
 import { getAllTalentBook, getAllWeaponAscension } from "@/lib/materials-api";
-import Welcome from "@/components/card/Welcome";
+import Welcome from "@/components/ui/Welcome";
 import ResetTime from "@/components/countdown/ResetTime";
 import DailyFarming from "@/components/farming/DailyFarming";
 import YoutubeVideos from "@/components/youtube/YoutubeVideos";

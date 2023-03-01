@@ -1,5 +1,6 @@
 import useDailyResetTime from "@/hooks/useDailyResetTime";
 import React from "react";
+import SubHeader from "../ui/SubHeader";
 import Time from "./Time";
 
 const ResetTime = () => {
@@ -14,9 +15,7 @@ const ResetTime = () => {
 
   return (
     <div className="bg-layout py-5 px-6 rounded space-y-3">
-      <h3 className="font-bold text-xl text-gray-100 uppercase">
-        Daily Reset Time
-      </h3>
+      <SubHeader>Daily Reset Time</SubHeader>
       <Time {...asia} region="ASIA" />
       <Time {...eu} region="EU" />
       <Time {...na} region="NA" />

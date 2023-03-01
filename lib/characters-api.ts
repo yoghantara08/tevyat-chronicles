@@ -22,7 +22,7 @@ export const getAllCharacters = async () => {
   return characters;
 };
 
-export const getCharacter = async (name: string) => {
+export const getCharacter = async (name: string | string[] | undefined) => {
   const response = await API.get(`/characters/${name}`);
   const character: ICharacter = response.data;
 
