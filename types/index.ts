@@ -77,3 +77,15 @@ export interface IConstellations {
   description: string;
   level: number;
 }
+
+export interface IWeapon {
+  id: string;
+  name: string;
+  rarity: number;
+  baseAttack: number;
+  subStat: string;
+  passiveName: string;
+  passiveDesc: string;
+  location: string;
+  ascensionMaterial: string;
+}
