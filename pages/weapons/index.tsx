@@ -1,9 +1,8 @@
 import MainHeader from "@/components/ui/MainHeader";
-import SubHeader from "@/components/ui/SubHeader";
-import WeaponCard from "@/components/weapons/WeaponCard";
 import WeaponSection from "@/components/weapons/WeaponSection";
 import { getAllWeapons } from "@/lib/weapons-api";
 import { IWeapon } from "@/types";
+import { sortWeapons } from "@/utils";
 import { GetStaticProps } from "next";
 
 // GET STATIC PROPS
@@ -22,12 +21,22 @@ interface Props {
 
 // COMPONENT
 const WeaponsPage: React.FC<Props> = ({ weapons }) => {
-  const weaponRarity1 = weapons.filter((weapon) => weapon.rarity === 1);
-  const weaponRarity2 = weapons.filter((weapon) => weapon.rarity === 2);
-  const weaponRarity3 = weapons.filter((weapon) => weapon.rarity === 3);
-  const weaponRarity4 = weapons.filter((weapon) => weapon.rarity === 4);
-  const weaponRarity5 = weapons.filter(
-    (weapon) => weapon.rarity === 5 && weapon.id !== "eberlasting-moonglow"
+  const weaponRarity1 = sortWeapons(
+    weapons.filter((weapon) => weapon.rarity === 1)
+  );
+  const weaponRarity2 = sortWeapons(
+    weapons.filter((weapon) => weapon.rarity === 2)
+  );
+  const weaponRarity3 = sortWeapons(
+    weapons.filter((weapon) => weapon.rarity === 3)
+  );
+  const weaponRarity4 = sortWeapons(
+    weapons.filter((weapon) => weapon.rarity === 4)
+  );
+  const weaponRarity5 = sortWeapons(
+    weapons.filter(
+      (weapon) => weapon.rarity === 5 && weapon.id !== "eberlasting-moonglow"
+    )
   );
 
   return (

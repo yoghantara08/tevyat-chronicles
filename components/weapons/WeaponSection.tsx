@@ -11,7 +11,7 @@ const WeaponSection: React.FC<Props> = ({ title, weapons }) => {
   return (
     <section className="mb-5">
       <SubHeader>{title}</SubHeader>
-      <div className="grid grid-cols-3 md:grid-cols-5 xl:grid-cols-7 2xl:grid-cols-9 gap-5 mt-3">
+      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 xl:grid-cols-7 2xl:grid-cols-9 gap-5 mt-3">
         {weapons.map((weapon) => (
           <WeaponCard
             key={weapon.id}

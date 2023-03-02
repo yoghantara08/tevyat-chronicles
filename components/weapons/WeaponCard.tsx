@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 interface Props {
@@ -20,7 +19,7 @@ const WeaponCard: React.FC<Props> = ({ weaponId, name, rarity }) => {
               .replaceAll("'", "")
               .replaceAll(" ", "")}.png`}
             alt={weaponId}
-            className="w-32 h-32"
+            className="w-20 h-20 xs:w-24 xs:h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32"
           />
         </picture>
       </div>
