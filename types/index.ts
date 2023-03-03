@@ -81,6 +81,7 @@ export interface IConstellations {
 export interface IWeapon {
   id: string;
   name: string;
+  type: string;
   rarity: number;
   baseAttack: number;
   subStat: string;
