@@ -1,16 +1,16 @@
-import { ICharacters } from "@/types";
+import { ICharacter } from "@/types/character";
+import StarIcon from "@mui/icons-material/Star";
 import Image from "next/image";
 import Link from "next/link";
-import StarIcon from "@mui/icons-material/Star";
 
 interface Props {
-  character: ICharacters;
+  character: ICharacter;
 }
 
 const CharacterCard: React.FC<Props> = ({ character }) => {
   let stars = [];
 
-  for (let i = 0; i < character.rarity; i++) {
+  for (let i = 0; i < character.rank; i++) {
     stars.push(i);
   }
 
@@ -22,7 +22,7 @@ const CharacterCard: React.FC<Props> = ({ character }) => {
       <div className="grid grid-cols-2">
         <div className="capitalize py-3">
           <p className="pl-1 mb-1 font-bold text-xl text-white">
-            {character.id.replaceAll("-", " ")}
+            {character.name}
           </p>
           <div className="mb-2">
             {stars.map((s: number) => (
@@ -30,8 +30,8 @@ const CharacterCard: React.FC<Props> = ({ character }) => {
             ))}
           </div>
           <Image
-            src={`/elements/${character.vision.toLowerCase()}.png`}
-            alt={character.id}
+            src={`/elements/${character.element.toLowerCase()}.png`}
+            alt={character.element}
             width={36}
             height={36}
           />
@@ -39,10 +39,11 @@ const CharacterCard: React.FC<Props> = ({ character }) => {
 
         <div className=" flex justify-center py-3">
           <Image
-            src={`/characters/${character.id.replaceAll("-", "_")}.png`}
-            alt={character.id}
+            src={`https://api.ambr.top/assets/UI/${character.icon}.png`}
+            alt={character.name}
             width={106}
             height={106}
+            className="w-fit"
           />
         </div>
       </div>
