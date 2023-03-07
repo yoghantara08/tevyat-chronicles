@@ -1,3 +1,4 @@
+import Container from "@/components/layout/Container";
 import MainHeader from "@/components/ui/MainHeader";
 import WeaponCard from "@/components/weapons/WeaponCard";
 import { getAllWeapons } from "@/lib/weapon-api";
@@ -23,16 +24,16 @@ interface Props {
 // COMPONENT
 const WeaponsPage: React.FC<Props> = ({ weapons, types }) => {
   return (
-    <section className="py-5">
+    <div className="py-5">
       <MainHeader>Weapons</MainHeader>
       <div className="bg-layout py-3 px-6 rounded-xl">
-        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 xl:grid-cols-7 2xl:grid-cols-9 gap-5 mt-3">
+        <Container>
           {weapons.map((weapon) => (
             <WeaponCard key={weapon.id} weapon={weapon} />
           ))}
-        </div>
+        </Container>
       </div>
-    </section>
+    </div>
   );
 };
 

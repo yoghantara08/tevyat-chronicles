@@ -1,5 +1,3 @@
-import { ICharacters, IWeapon } from "@/types";
-
 export const getDay = (): string => {
   let day = "";
   const now = new Date();
@@ -52,31 +50,4 @@ export const getBirthday = (birthday: string) => {
   let date = d.getDate();
 
   return `${date} ${month}`;
-};
-
-export const sortWeapons = (weapons: IWeapon[]) => {
-  const sortedWeapons = weapons.sort((a, b) => {
-    if (a.name < b.name) {
-      return -1;
-    }
-    if (a.name > b.name) {
-      return 1;
-    }
-    return 0;
-  });
-  return sortedWeapons;
-};
-
-export const sortCharacters = (characters: ICharacters[]) => {
-  const sortedCharacters = characters.sort((a, b) => {
-    if (a.name < b.name) {
-      return -1;
-    }
-    if (a.name > b.name) {
-      return 1;
-    }
-    return 0;
-  });
-
-  return sortedCharacters;
 };

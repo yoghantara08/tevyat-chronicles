@@ -24,7 +24,7 @@ const Home: React.FC<Props> = ({ weaponAscension }) => {
   console.log(weaponAscension.monday);
 
   return (
-    <section className="grid lg:grid-cols-3 w-full gap-5 text-gray-200 mb-5">
+    <div className="grid lg:grid-cols-3 w-full gap-5 text-gray-200 mb-5">
       <div className="grid lg:grid-cols-2 lg:col-span-2 gap-5 h-fit">
         <Welcome />
         <ResetTime />
@@ -34,7 +34,7 @@ const Home: React.FC<Props> = ({ weaponAscension }) => {
         /> */}
       </div>
       <YoutubeVideos />
-    </section>
+    </div>
   );
 };
 
