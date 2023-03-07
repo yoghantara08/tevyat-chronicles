@@ -8,12 +8,3 @@ export const API = axios.create({
     Accept: "application/json",
   },
 });
-
-const BASE_URL2 = "https://api.genshin.dev";
-
-export const _API = axios.create({
-  baseURL: BASE_URL2,
-  headers: {
-    Accept: "application/json",
-  },
-});

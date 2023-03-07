@@ -1,40 +1,27 @@
-import CharacterPreview from "@/components/characters/CharacterPreview";
-import CharacterProfile from "@/components/characters/CharacterProfile";
-import Constellations from "@/components/characters/Constellations";
-import PassiveTalents from "@/components/characters/PassiveTalents";
-import SkillTalents from "@/components/characters/SkillTalents";
-import { getAllCharacters, getCharacter } from "@/lib/characters-api";
-import { ICharacter } from "@/types";
-import { GetStaticPaths, GetStaticProps } from "next";
+import { ICharacter } from "@/types/character";
+import { GetStaticProps } from "next";
 import { useRouter } from "next/router";
 
 // STATIC PROPS
 export const getStaticProps: GetStaticProps = async (context) => {
-  let characterId;
-  if (context.params) {
-    characterId = context.params.characterId;
-  }
-
-  const character: ICharacter = await getCharacter(characterId);
-
   return {
-    props: { character },
+    props: {},
   };
 };
 
 // STATIC PATHS
-export const getStaticPaths: GetStaticPaths = async () => {
-  const characters = await getAllCharacters();
+// export const getStaticPaths: GetStaticPaths = async () => {
+//   const characters = await getAllCharacters();
 
-  const paths = characters.map((character) => ({
-    params: { characterId: character.id },
-  }));
+//   const paths = characters.map((character) => ({
+//     params: { characterId: character.id },
+//   }));
 
-  return {
-    paths: paths,
-    fallback: false,
-  };
-};
+//   return {
+//     paths: paths,
+//     fallback: false,
+//   };
+// };
 
 // PROPS
 interface Props {
@@ -52,7 +39,7 @@ const CharacterPage: React.FC<Props> = ({ character }) => {
 
   return (
     <>
-      <section>
+      {/* <section>
         <div className="grid xl:grid-cols-3 gap-5">
           <CharacterPreview
             id={characterId}
@@ -65,7 +52,7 @@ const CharacterPage: React.FC<Props> = ({ character }) => {
       </section>
       <SkillTalents character={character} characterId={characterId} />
       <PassiveTalents character={character} characterId={characterId} />
-      <Constellations character={character} characterId={characterId} />
+      <Constellations character={character} characterId={characterId} /> */}
     </>
   );
 };
