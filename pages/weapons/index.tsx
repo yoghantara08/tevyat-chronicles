@@ -1,54 +1,36 @@
 import MainHeader from "@/components/ui/MainHeader";
-import WeaponSection from "@/components/weapons/WeaponSection";
-import { getAllWeapons } from "@/lib/weapons-api";
-import { IWeapon } from "@/types";
-import { sortWeapons } from "@/utils";
+import WeaponCard from "@/components/weapons/WeaponCard";
+import { getAllWeapons } from "@/lib/weapon-api";
+import { IWeapon, IWeaponTypes } from "@/types/weapon";
 import { GetStaticProps } from "next";
 
 // GET STATIC PROPS
 export const getStaticProps: GetStaticProps = async () => {
-  const weapons = await getAllWeapons();
+  const { weapons, types } = await getAllWeapons();
+  const releasedWeapons = weapons.filter((weap) => weap.beta !== true);
 
   return {
-    props: { weapons },
+    props: { weapons: releasedWeapons, types },
   };
 };
 
 // PROPS
 interface Props {
   weapons: IWeapon[];
+  types: IWeaponTypes;
 }
 
 // COMPONENT
-const WeaponsPage: React.FC<Props> = ({ weapons }) => {
-  const weaponRarity1 = sortWeapons(
-    weapons.filter((weapon) => weapon.rarity === 1)
-  );
-  const weaponRarity2 = sortWeapons(
-    weapons.filter((weapon) => weapon.rarity === 2)
-  );
-  const weaponRarity3 = sortWeapons(
-    weapons.filter((weapon) => weapon.rarity === 3)
-  );
-  const weaponRarity4 = sortWeapons(
-    weapons.filter((weapon) => weapon.rarity === 4)
-  );
-  const weaponRarity5 = sortWeapons(
-    weapons.filter(
-      (weapon) => weapon.rarity === 5 && weapon.id !== "eberlasting-moonglow"
-    )
-  );
-
+const WeaponsPage: React.FC<Props> = ({ weapons, types }) => {
   return (
     <section className="py-5">
       <MainHeader>Weapons</MainHeader>
-
-      <div className="bg-layout py-5 px-6 rounded">
-        <WeaponSection title="5-Star Weapons" weapons={weaponRarity5} />
-        <WeaponSection title="4-Star Weapons" weapons={weaponRarity4} />
-        <WeaponSection title="3-Star Weapons" weapons={weaponRarity3} />
-        <WeaponSection title="2-Star Weapons" weapons={weaponRarity2} />
-        <WeaponSection title="1-Star Weapons" weapons={weaponRarity1} />
+      <div className="bg-layout py-3 px-6 rounded-xl">
+        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 xl:grid-cols-7 2xl:grid-cols-9 gap-5 mt-3">
+          {weapons.map((weapon) => (
+            <WeaponCard key={weapon.id} weapon={weapon} />
+          ))}
+        </div>
       </div>
     </section>
   );
